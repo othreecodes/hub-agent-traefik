@@ -216,7 +216,7 @@ func (r runCmd) runAgent(cliCtx *cli.Context) error {
 	traefikAPIPort := cliCtx.String(flagTraefikAPIPort)
 	traefikTunnelPort := cliCtx.String(flagTraefikTunnelPort)
 
-	apiURL := "https://" + net.JoinHostPort(traefikHost, traefikAPIPort)
+	apiURL := "http://" + net.JoinHostPort(traefikHost, traefikAPIPort)
 	tunnelAddr := net.JoinHostPort(traefikHost, traefikTunnelPort)
 
 	traefikTLSCA := cliCtx.String(flagTraefikTLSCA)
